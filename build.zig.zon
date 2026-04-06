@@ -4,8 +4,8 @@
     .version = "0.0.0",
     .dependencies = .{
         .zpix = .{
-            .url = "git+https://github.com/diogok/zpix#00691dc8b594e785d95a7a5293002d16b5b109ee",
-            .hash = "zpix-0.1.0-N4OAhxVKAgAZjlblrtn6Ku2It0xkgyuA7JvmPRBDvmNm",
+            .url = "git+https://github.com/diogok/zpix#89483fed7c0bd708ebdb675ae0dac26584fa2aaa",
+            .hash = "zpix-0.1.0-N4OAh51WAgAswt6zRptFcbVz_GotsTopIFUW-81cFXJ2",
         },
         .canvas = .{
             .url = "git+https://github.com/make-it-render/canvas#29370854e2c495c9b5cf3124828948cd83d3381e",
