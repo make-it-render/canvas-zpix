@@ -50,7 +50,7 @@ pub fn getPixel(self: *const ImageRenderer, x: u16, y: u16) [4]u8 {
 }
 
 /// Save the pixel buffer to a PNG file.
-pub fn savePng(self: *const ImageRenderer, path: []const u8) !void {
+pub fn savePng(self: *const ImageRenderer, io: std.Io, path: []const u8) !void {
     var zpix_img = zpix.Image{
         .width = self.width,
         .height = self.height,
@@ -58,7 +58,7 @@ pub fn savePng(self: *const ImageRenderer, path: []const u8) !void {
         .data = self.pixels,
         .allocator = self.allocator,
     };
-    try zpix.savePngFile(&zpix_img, path);
+    try zpix.savePngFile(io, &zpix_img, path);
 }
 
 const vtable = Renderer.VTable{

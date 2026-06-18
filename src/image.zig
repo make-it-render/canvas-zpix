@@ -7,8 +7,8 @@ height: u16,
 allocator: std.mem.Allocator,
 
 /// Load an image from a file path (PNG or JPEG, auto-detected).
-pub fn init(allocator: std.mem.Allocator, path: []const u8) !@This() {
-    var zpix_img = try zpix.loadFile(allocator, path);
+pub fn init(io: std.Io, allocator: std.mem.Allocator, path: []const u8) !@This() {
+    var zpix_img = try zpix.loadFile(io, allocator, path);
     defer zpix_img.deinit();
     return initFromZpix(allocator, &zpix_img);
 }
@@ -409,7 +409,7 @@ test "full pipeline: draw scene → ImageRenderer → PNG → reload → verify"
     // 1. Render a scene to ImageRenderer
     var img_renderer = try ImageRenderer.init(allocator, 8, 8);
     defer img_renderer.deinit();
-    var canv = Canvas.init(allocator, img_renderer.renderer());
+    var canv = Canvas.init(std.testing.io, allocator, img_renderer.renderer());
     defer canv.deinit();
 
     const surface = try canv.createSurface(.{ .width = 8, .height = 8 });

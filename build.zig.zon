@@ -2,14 +2,15 @@
     .name = .canvas_zpix,
     .fingerprint = 0xc2ac8dd68c962cb0,
     .version = "0.0.0",
+    .minimum_zig_version = "0.16.0",
     .dependencies = .{
         .zpix = .{
-            .url = "git+https://github.com/diogok/zpix#89483fed7c0bd708ebdb675ae0dac26584fa2aaa",
-            .hash = "zpix-0.1.0-N4OAh51WAgAswt6zRptFcbVz_GotsTopIFUW-81cFXJ2",
+            .url = "git+https://github.com/diogok/zpix#5f000e8be0643a272f5b80ee5b4f6b2295b0cb06",
+            .hash = "zpix-0.1.0-N4OAh-dVAgAMwW1doZlnhUDR8UOop9r69cW8bdnGelkz",
         },
         .canvas = .{
-            .url = "git+https://github.com/make-it-render/canvas#29370854e2c495c9b5cf3124828948cd83d3381e",
-            .hash = "canvas-0.0.0-8mH69i6bAgBkkjCHglKRBwNi1EMq7eE_bP8zBd1sv8ik",
+            .url = "git+https://github.com/make-it-render/canvas#861dab1c83c03dd82e31ae51abffa1ab94e471eb",
+            .hash = "canvas-0.0.0-8mH69q6eAgCia7LMIEN9AdiMKWvg50uYVntLR0dXGoaO",
         },
     },
     .paths = .{
